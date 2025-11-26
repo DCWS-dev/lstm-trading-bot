@@ -1,0 +1,189 @@
+{
+  "totalTrades": 4500,
+  "totalWins": 3164,
+  "totalLosses": 0,
+  "accuracy": 0.7031111111111111,
+  "winRate": 70.31111111111112,
+  "pairResults": {
+    "BTCUSDT": {
+      "trades": 150,
+      "wins": 122,
+      "accuracy": 0.8133333333333334,
+      "avgSignal": 0.8117504023714136
+    },
+    "ETHUSDT": {
+      "trades": 150,
+      "wins": 125,
+      "accuracy": 0.8333333333333334,
+      "avgSignal": 0.7940246493223266
+    },
+    "BNBUSDT": {
+      "trades": 150,
+      "wins": 117,
+      "accuracy": 0.78,
+      "avgSignal": 0.7660913935390032
+    },
+    "XRPUSDT": {
+      "trades": 150,
+      "wins": 101,
+      "accuracy": 0.6733333333333333,
+      "avgSignal": 0.6767561186154499
+    },
+    "ADAUSDT": {
+      "trades": 150,
+      "wins": 102,
+      "accuracy": 0.68,
+      "avgSignal": 0.6769552478930846
+    },
+    "SOLUSDT": {
+      "trades": 150,
+      "wins": 103,
+      "accuracy": 0.6866666666666666,
+      "avgSignal": 0.6770925587111662
+    },
+    "DOGEUSDT": {
+      "trades": 150,
+      "wins": 101,
+      "accuracy": 0.6733333333333333,
+      "avgSignal": 0.677256989443222
+    },
+    "DOTUSDT": {
+      "trades": 150,
+      "wins": 89,
+      "accuracy": 0.5933333333333334,
+      "avgSignal": 0.6773752994181051
+    },
+    "LTCUSDT": {
+      "trades": 150,
+      "wins": 116,
+      "accuracy": 0.7733333333333333,
+      "avgSignal": 0.7761646331421009
+    },
+    "LINKUSDT": {
+      "trades": 150,
+      "wins": 102,
+      "accuracy": 0.68,
+      "avgSignal": 0.6762090465630511
+    },
+    "MATICUSDT": {
+      "trades": 150,
+      "wins": 107,
+      "accuracy": 0.7133333333333334,
+      "avgSignal": 0.6776620039861737
+    },
+    "AVAXUSDT": {
+      "trades": 150,
+      "wins": 102,
+      "accuracy": 0.68,
+      "avgSignal": 0.6766523716981269
+    },
+    "FTMUSDT": {
+      "trades": 150,
+      "wins": 97,
+      "accuracy": 0.6466666666666666,
+      "avgSignal": 0.6767937113573841
+    },
+    "ATOMUSDT": {
+      "trades": 150,
+      "wins": 101,
+      "accuracy": 0.6733333333333333,
+      "avgSignal": 0.6764473352012481
+    },
+    "UNIUSDT": {
+      "trades": 150,
+      "wins": 105,
+      "accuracy": 0.7,
+      "avgSignal": 0.6771310807031315
+    },
+    "ARBUSDT": {
+      "trades": 150,
+      "wins": 103,
+      "accuracy": 0.6866666666666666,
+      "avgSignal": 0.6769154607494373
+    },
+    "OPUSDT": {
+      "trades": 150,
+      "wins": 91,
+      "accuracy": 0.6066666666666667,
+      "avgSignal": 0.6771357652822475
+    },
+    "APEUSDT": {
+      "trades": 150,
+      "wins": 100,
+      "accuracy": 0.6666666666666666,
+      "avgSignal": 0.6772261512090433
+    },
+    "LUNCUSDT": {
+      "trades": 150,
+      "wins": 96,
+      "accuracy": 0.64,
+      "avgSignal": 0.6775421130245226
+    },
+    "SHIBUSDT": {
+      "trades": 150,
+      "wins": 104,
+      "accuracy": 0.6933333333333334,
+      "avgSignal": 0.6761687635117498
+    },
+    "FLOKIUSDT": {
+      "trades": 150,
+      "wins": 103,
+      "accuracy": 0.6866666666666666,
+      "avgSignal": 0.6772503385151907
+    },
+    "PEPEUSDT": {
+      "trades": 150,
+      "wins": 108,
+      "accuracy": 0.72,
+      "avgSignal": 0.6765427294217516
+    },
+    "SUIUSDT": {
+      "trades": 150,
+      "wins": 102,
+      "accuracy": 0.68,
+      "avgSignal": 0.6769085716579476
+    },
+    "TONUSDT": {
+      "trades": 150,
+      "wins": 107,
+      "accuracy": 0.7133333333333334,
+      "avgSignal": 0.6764867764235738
+    },
+    "NEARUSDT": {
+      "trades": 150,
+      "wins": 111,
+      "accuracy": 0.74,
+      "avgSignal": 0.6761664444401626
+    },
+    "ALGOUSDT": {
+      "trades": 150,
+      "wins": 113,
+      "accuracy": 0.7533333333333333,
+      "avgSignal": 0.6760179792278944
+    },
+    "FILUSDT": {
+      "trades": 150,
+      "wins": 105,
+      "accuracy": 0.7,
+      "avgSignal": 0.7573743090814298
+    },
+    "THETAUSDT": {
+      "trades": 150,
+      "wins": 116,
+      "accuracy": 0.7733333333333333,
+      "avgSignal": 0.7403425195103888
+    },
+    "CHZUSDT": {
+      "trades": 150,
+      "wins": 109,
+      "accuracy": 0.7266666666666667,
+      "avgSignal": 0.6758890095227005
+    },
+    "OPTIMUSDT": {
+      "trades": 150,
+      "wins": 106,
+      "accuracy": 0.7066666666666667,
+      "avgSignal": 0.6768131229992127
+    }
+  }
+}

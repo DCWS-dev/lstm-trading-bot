@@ -1,0 +1,35 @@
+{
+  "name": "hybrid-trading-bot",
+  "version": "3.0.0",
+  "description": "Enhanced Hybrid Trading Strategy Bot with ML LSTM, Kelly Criterion, and Parameter Optimization",
+  "main": "src/runner-hybrid.js",
+  "scripts": {
+    "start": "node src/runner-hybrid.js",
+    "backtest": "node src/backtest-hybrid.js",
+    "backtest:enhanced": "node src/backtest-enhanced.js",
+    "backtest:lstm": "node src/backtest-lstm-30-pairs.js",
+    "backtest:week4": "node src/backtest-week4.js",
+    "backtest:hybrid": "node src/final-hybrid-strategy.js",
+    "backtest:75": "node src/backtest-lstm-75.js",
+    "test:ml": "node -e \"require('./test-ml.js')\"",
+    "test:risk": "node -e \"require('./test-risk.js')\"",
+    "optimize": "node src/strategy-optimizer.js",
+    "optimize:lstm": "node src/strategy-optimizer-lstm.js",
+    "optimize:lstm:75": "node src/advanced-lstm-optimizer-75.js",
+    "optimize:lstm:final": "node src/final-lstm-optimizer-75.js",
+    "optimize:week4": "node src/week4-optimized.js",
+    "ensemble:75": "node src/multi-architecture-ensemble.js",
+    "compare": "node compare-strategies.js",
+    "report": "node daily-report.js",
+    "reoptimize": "node weekly-reoptimize.js",
+    "dev": "node src/runner-hybrid.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

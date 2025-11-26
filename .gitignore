@@ -1,0 +1,115 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment & API Keys
+.env
+.env.local
+.env.*.local
+.env.production
+config/.env*
+config/live-config.json
+
+# Confidential Data & Secrets
+config/*.json
+!config/.env.example
+secrets/
+*.secret
+.credentials
+api-keys/
+
+# Trading Data & Strategy Files
+logs/*.csv
+logs/*.json
+logs/
+data/
+backtest-results/
+historical-data/
+*.trade
+*.strategy
+trading-data/
+
+# Tests & Test Results
+test-results/
+*.test.js
+test/
+__tests__/
+coverage/
+.nyc_output/
+
+# Performance & Optimization Data
+optimization-results/
+*.optimization
+tuning-data/
+parameter-search/
+hyperparameter-results/
+
+# Development & Debug Files
+debug/
+*.debug
+temp-data/
+tmp-cache/
+.vscode/settings.json
+.idea/
+
+# Logs & Output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.prettier-cache
+.cache-loader/
+
+# Build outputs
+dist/
+build/
+out/
+bin/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# Private/Sensitive Files
+private/
+sensitive/
+confidential/
+*.private
+personal-notes.txt
