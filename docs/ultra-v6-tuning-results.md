@@ -1,0 +1,32 @@
+# ULTRA v6 TUNING RESULTS
+
+- BTCUSDT: WR=100.0% Trades=2 Profit=0.68 Params={"minConfidence":0.8,"tpPct":0.5,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- ETHUSDT: WR=87.5% Trades=8 Profit=3.92 Params={"minConfidence":0.8,"tpPct":0.5,"slPct":0.5,"maxHoldBars":3,"sessions":150}
+- BNBUSDT: WR=100.0% Trades=4 Profit=3.50 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.25,"maxHoldBars":8,"sessions":150}
+- XRPUSDT: WR=94.4% Trades=18 Profit=10.36 Params={"minConfidence":0.7,"tpPct":0.3,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- ADAUSDT: WR=100.0% Trades=14 Profit=11.28 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- SOLUSDT: WR=100.0% Trades=7 Profit=8.47 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.25,"maxHoldBars":5,"sessions":150}
+- DOGEUSDT: WR=100.0% Trades=12 Profit=16.98 Params={"minConfidence":0.6,"tpPct":0.8,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- DOTUSDT: WR=88.9% Trades=18 Profit=9.35 Params={"minConfidence":0.7,"tpPct":0.3,"slPct":0.35,"maxHoldBars":8,"sessions":150}
+- LTCUSDT: WR=100.0% Trades=2 Profit=2.33 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.35,"maxHoldBars":8,"sessions":150}
+- LINKUSDT: WR=100.0% Trades=14 Profit=13.30 Params={"minConfidence":0.6,"tpPct":0.5,"slPct":0.5,"maxHoldBars":8,"sessions":150}
+- MATICUSDT: WR=100.0% Trades=1 Profit=0.43 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.35,"maxHoldBars":3,"sessions":150}
+- AVAXUSDT: WR=80.0% Trades=30 Profit=12.62 Params={"minConfidence":0.7,"tpPct":0.3,"slPct":0.35,"maxHoldBars":3,"sessions":150}
+- FTMUSDT: WR=100.0% Trades=3 Profit=2.77 Params={"minConfidence":0.8,"tpPct":0.5,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- ATOMUSDT: WR=94.1% Trades=17 Profit=18.58 Params={"minConfidence":0.6,"tpPct":0.5,"slPct":0.35,"maxHoldBars":8,"sessions":150}
+- UNIUSDT: WR=84.6% Trades=13 Profit=5.59 Params={"minConfidence":0.6,"tpPct":0.3,"slPct":0.25,"maxHoldBars":8,"sessions":150}
+- ARBUSDT: WR=100.0% Trades=5 Profit=2.74 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.25,"maxHoldBars":3,"sessions":150}
+- OPUSDT: WR=100.0% Trades=3 Profit=3.65 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.5,"maxHoldBars":8,"sessions":150}
+- APEUSDT: WR=100.0% Trades=5 Profit=3.57 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.35,"maxHoldBars":8,"sessions":150}
+- LUNCUSDT: WR=100.0% Trades=5 Profit=7.50 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.25,"maxHoldBars":8,"sessions":150}
+- SHIBUSDT: WR=100.0% Trades=5 Profit=2.98 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.5,"maxHoldBars":5,"sessions":150}
+- FLOKIUSDT: WR=88.2% Trades=17 Profit=9.39 Params={"minConfidence":0.7,"tpPct":0.3,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- PEPEUSDT: WR=100.0% Trades=8 Profit=5.95 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.25,"maxHoldBars":8,"sessions":150}
+- SUIUSDT: WR=100.0% Trades=2 Profit=1.87 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.5,"maxHoldBars":8,"sessions":150}
+- TONUSDT: WR=100.0% Trades=5 Profit=6.09 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.25,"maxHoldBars":8,"sessions":150}
+- NEARUSDT: WR=100.0% Trades=5 Profit=6.55 Params={"minConfidence":0.8,"tpPct":0.5,"slPct":0.25,"maxHoldBars":5,"sessions":150}
+- ALGOUSDT: WR=100.0% Trades=8 Profit=5.93 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.25,"maxHoldBars":3,"sessions":150}
+- FILUSDT: WR=100.0% Trades=5 Profit=7.02 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.35,"maxHoldBars":8,"sessions":150}
+- THETAUSDT: WR=100.0% Trades=5 Profit=4.75 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.35,"maxHoldBars":3,"sessions":150}
+- CHZUSDT: WR=100.0% Trades=5 Profit=3.29 Params={"minConfidence":0.8,"tpPct":0.8,"slPct":0.35,"maxHoldBars":5,"sessions":150}
+- OPTIMUSDT: WR=100.0% Trades=5 Profit=3.52 Params={"minConfidence":0.8,"tpPct":0.3,"slPct":0.5,"maxHoldBars":3,"sessions":150}

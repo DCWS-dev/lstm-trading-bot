@@ -7,70 +7,70 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 Configuration 1:
-  Fitness: 96.03%
+  Fitness: 95.27%
   Accuracy: 100.00%
-  Stability: 80.0%
+  Stability: 85.0%
 
   Parameters:
-  • Hidden Units: 100
-  • LSTM Layers: 2.5971139338891893
-  • Learning Rate: 0.033439
-  • Epochs: 68
-  • Batch Size: 14.86990449271616
-  • Dropout: 0.276
-  • L2 Regularization: 0.005928
-  • Momentum Beta: 0.918
-  • Bidirectional: NO
-  • Attention Heads: 5.861399604470322
+  • Hidden Units: 128
+  • LSTM Layers: 2.197238021832627
+  • Learning Rate: 0.018694
+  • Epochs: 99
+  • Batch Size: 6.309249619841336
+  • Dropout: 0.411
+  • L2 Regularization: 0.013313
+  • Momentum Beta: 0.977
+  • Bidirectional: YES ✅
+  • Attention Heads: 10.740791581024578
   • Residual Connections: NO
-  • Sequence Length: 32
-  • Gradient Clip: 2.200
-  • Initial Weight Scale: 0.6796
-  • Decay Rate: 0.990278
+  • Sequence Length: 58
+  • Gradient Clip: 3.805
+  • Initial Weight Scale: 0.9178
+  • Decay Rate: 0.996553
 
 Configuration 2:
-  Fitness: 95.54%
+  Fitness: 95.07%
   Accuracy: 100.00%
   Stability: 80.0%
 
   Parameters:
-  • Hidden Units: 193
-  • LSTM Layers: 2.96623349173342
-  • Learning Rate: 0.037933
-  • Epochs: 68
-  • Batch Size: 23.023324580886673
-  • Dropout: 0.331
-  • L2 Regularization: 0.019140
-  • Momentum Beta: 0.938
+  • Hidden Units: 222
+  • LSTM Layers: 2.0530124039709463
+  • Learning Rate: 0.023983
+  • Epochs: 114
+  • Batch Size: 5.672818650718608
+  • Dropout: 0.418
+  • L2 Regularization: 0.010035
+  • Momentum Beta: 0.939
   • Bidirectional: NO
-  • Attention Heads: 2.560634864598133
-  • Residual Connections: YES ✅
-  • Sequence Length: 20
-  • Gradient Clip: 3.780
-  • Initial Weight Scale: 0.3808
-  • Decay Rate: 0.998985
+  • Attention Heads: 5.050709910754505
+  • Residual Connections: NO
+  • Sequence Length: 53
+  • Gradient Clip: 1.035
+  • Initial Weight Scale: 0.1423
+  • Decay Rate: 0.992988
 
 Configuration 3:
-  Fitness: 95.07%
+  Fitness: 94.96%
   Accuracy: 100.00%
-  Stability: 65.0%
+  Stability: 60.0%
 
   Parameters:
-  • Hidden Units: 134
-  • LSTM Layers: 2.867531973421608
-  • Learning Rate: 0.044975
-  • Epochs: 65
-  • Batch Size: 9.179813269628442
-  • Dropout: 0.486
-  • L2 Regularization: 0.006753
-  • Momentum Beta: 0.922
+  • Hidden Units: 135
+  • LSTM Layers: 4.191513057191802
+  • Learning Rate: 0.025182
+  • Epochs: 58
+  • Batch Size: 15.002165509044728
+  • Dropout: 0.121
+  • L2 Regularization: 0.011697
+  • Momentum Beta: 0.873
   • Bidirectional: YES ✅
-  • Attention Heads: 3.5687510316503754
-  • Residual Connections: YES ✅
-  • Sequence Length: 43
-  • Gradient Clip: 4.596
-  • Initial Weight Scale: 0.3001
-  • Decay Rate: 0.995027
+  • Attention Heads: 1.420738400990036
+  • Residual Connections: NO
+  • Sequence Length: 44
+  • Gradient Clip: 3.021
+  • Initial Weight Scale: 0.1757
+  • Decay Rate: 0.991314
 
 ────────────────────────────────────────────────────────────────────────────────
 📈 CONVERGENCE HISTORY:

@@ -7,23 +7,23 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 Total Trades: 4,500
-Total Wins: 3,164
-Win Rate: 70.31%
-Overall Accuracy: 70.31%
+Total Wins: 3,105
+Win Rate: 69.00%
+Overall Accuracy: 69.00%
 
 ⭐ TOP 10 PERFORMING PAIRS:
 ────────────────────────────────────────────────────────────────────────────────
 
-1. ETHUSDT      | 83.33% | 125/150
-2. BTCUSDT      | 81.33% | 122/150
-3. BNBUSDT      | 78.00% | 117/150
-4. LTCUSDT      | 77.33% | 116/150
-5. THETAUSDT    | 77.33% | 116/150
-6. ALGOUSDT     | 75.33% | 113/150
-7. NEARUSDT     | 74.00% | 111/150
-8. CHZUSDT      | 72.67% | 109/150
-9. PEPEUSDT     | 72.00% | 108/150
-10. MATICUSDT    | 71.33% | 107/150
+1. BTCUSDT      | 80.00% | 120/150
+2. ETHUSDT      | 79.33% | 119/150
+3. FILUSDT      | 76.67% | 115/150
+4. FLOKIUSDT    | 75.33% | 113/150
+5. BNBUSDT      | 74.67% | 112/150
+6. THETAUSDT    | 74.00% | 111/150
+7. LTCUSDT      | 72.67% | 109/150
+8. UNIUSDT      | 72.67% | 109/150
+9. NEARUSDT     | 72.00% | 108/150
+10. ALGOUSDT     | 72.00% | 108/150
 
 ⚙️  ADVANCED OPTIMIZER CONFIGURATION:
 ────────────────────────────────────────────────────────────────────────────────
@@ -55,10 +55,10 @@ Overall Accuracy: 70.31%
 💡 ANALYSIS:
 ────────────────────────────────────────────────────────────────────────────────
 
-⚠️ Gap to target: 4.69% (70.31% vs 75% target)
+⚠️ Gap to target: 6.00% (69.00% vs 75% target)
 
 📈 Performance Analysis:
-• Best pair: ETHUSDT (83.33%)
+• Best pair: BTCUSDT (80.00%)
 • Ensemble boost: ~12% (vs single model ~54-62%)
 • Consistency: High (top 10 within 5% range)
 

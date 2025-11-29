@@ -1,0 +1,323 @@
+# ULTRA v6 1000-trades real-history results
+
+{
+  "BTCUSDT": {
+    "pair": "BTCUSDT",
+    "trades": 1000,
+    "wins": 533,
+    "losses": 467,
+    "winRate": 53.300000000000004,
+    "totalProfit": -0.9221043453951757,
+    "avgWin": 0.24232032501267167,
+    "avgLoss": 0.2785414080881138,
+    "passes": 2
+  },
+  "ETHUSDT": {
+    "pair": "ETHUSDT",
+    "trades": 1000,
+    "wins": 484,
+    "losses": 516,
+    "winRate": 48.4,
+    "totalProfit": -12.920656011153964,
+    "avgWin": 0.2941710809996275,
+    "avgLoss": 0.30096794421506523,
+    "passes": 2
+  },
+  "BNBUSDT": {
+    "pair": "BNBUSDT",
+    "trades": 1000,
+    "wins": 474,
+    "losses": 526,
+    "winRate": 47.4,
+    "totalProfit": -22.336494435966554,
+    "avgWin": 0.3373530687216903,
+    "avgLoss": 0.3464673935552238,
+    "passes": 2
+  },
+  "XRPUSDT": {
+    "pair": "XRPUSDT",
+    "trades": 1000,
+    "wins": 493,
+    "losses": 507,
+    "winRate": 49.3,
+    "totalProfit": -7.514405652439815,
+    "avgWin": 0.29451739300734947,
+    "avgLoss": 0.30120607574963143,
+    "passes": 1
+  },
+  "ADAUSDT": {
+    "pair": "ADAUSDT",
+    "trades": 1000,
+    "wins": 476,
+    "losses": 524,
+    "winRate": 47.599999999999994,
+    "totalProfit": -15.729303471806462,
+    "avgWin": 0.43654035799740976,
+    "avgLoss": 0.426569682974377,
+    "passes": 2
+  },
+  "SOLUSDT": {
+    "pair": "SOLUSDT",
+    "trades": 1000,
+    "wins": 446,
+    "losses": 554,
+    "winRate": 44.6,
+    "totalProfit": -45.44910303717947,
+    "avgWin": 0.38371033296162377,
+    "avgLoss": 0.39094568869686575,
+    "passes": 2
+  },
+  "DOGEUSDT": {
+    "pair": "DOGEUSDT",
+    "trades": 1000,
+    "wins": 496,
+    "losses": 504,
+    "winRate": 49.6,
+    "totalProfit": -15.853527960463754,
+    "avgWin": 0.2849868241692347,
+    "avgLoss": 0.31191863640556433,
+    "passes": 1
+  },
+  "DOTUSDT": {
+    "pair": "DOTUSDT",
+    "trades": 1000,
+    "wins": 496,
+    "losses": 504,
+    "winRate": 49.6,
+    "totalProfit": -7.962432171178004,
+    "avgWin": 0.4680585833796023,
+    "avgLoss": 0.47642755858623176,
+    "passes": 1
+  },
+  "LTCUSDT": {
+    "pair": "LTCUSDT",
+    "trades": 1000,
+    "wins": 455,
+    "losses": 545,
+    "winRate": 45.5,
+    "totalProfit": -35.61656629370537,
+    "avgWin": 0.5881287517770761,
+    "avgLoss": 0.5563580703711472,
+    "passes": 2
+  },
+  "LINKUSDT": {
+    "pair": "LINKUSDT",
+    "trades": 1000,
+    "wins": 459,
+    "losses": 541,
+    "winRate": 45.9,
+    "totalProfit": -13.527496137555199,
+    "avgWin": 0.4812366107475031,
+    "avgLoss": 0.4332996311842128,
+    "passes": 1
+  },
+  "MATICUSDT": {
+    "pair": "MATICUSDT",
+    "trades": 1000,
+    "wins": 443,
+    "losses": 557,
+    "winRate": 44.3,
+    "totalProfit": -33.09124382702544,
+    "avgWin": 0.298193488745769,
+    "avgLoss": 0.296572637955837,
+    "passes": 2
+  },
+  "AVAXUSDT": {
+    "pair": "AVAXUSDT",
+    "trades": 1000,
+    "wins": 438,
+    "losses": 562,
+    "winRate": 43.8,
+    "totalProfit": 1.8257318274315446,
+    "avgWin": 0.28604087425061103,
+    "avgLoss": 0.21968001974081153,
+    "passes": 1
+  },
+  "FTMUSDT": {
+    "pair": "FTMUSDT",
+    "trades": 1000,
+    "wins": 455,
+    "losses": 545,
+    "winRate": 45.5,
+    "totalProfit": -26.782185488784357,
+    "avgWin": 0.5837265890873394,
+    "avgLoss": 0.536472997290869,
+    "passes": 2
+  },
+  "ATOMUSDT": {
+    "pair": "ATOMUSDT",
+    "trades": 1000,
+    "wins": 469,
+    "losses": 531,
+    "winRate": 46.9,
+    "totalProfit": -5.135377239096087,
+    "avgWin": 0.4566882308890661,
+    "avgLoss": 0.41303607820351823,
+    "passes": 1
+  },
+  "UNIUSDT": {
+    "pair": "UNIUSDT",
+    "trades": 1000,
+    "wins": 458,
+    "losses": 542,
+    "winRate": 45.800000000000004,
+    "totalProfit": 3.3517349255149527,
+    "avgWin": 0.7083215596816336,
+    "avgLoss": 0.5923607738167402,
+    "passes": 1
+  },
+  "ARBUSDT": {
+    "pair": "ARBUSDT",
+    "trades": 1000,
+    "wins": 405,
+    "losses": 595,
+    "winRate": 40.5,
+    "totalProfit": -43.30708753969052,
+    "avgWin": 0.42162546642270343,
+    "avgLoss": 0.359773783934261,
+    "passes": 2
+  },
+  "OPUSDT": {
+    "pair": "OPUSDT",
+    "trades": 1000,
+    "wins": 454,
+    "losses": 546,
+    "winRate": 45.4,
+    "totalProfit": -66.0622258200743,
+    "avgWin": 0.5987324648724358,
+    "avgLoss": 0.6188402287035905,
+    "passes": 2
+  },
+  "APEUSDT": {
+    "pair": "APEUSDT",
+    "trades": 1000,
+    "wins": 490,
+    "losses": 510,
+    "winRate": 49,
+    "totalProfit": 13.405432438995728,
+    "avgWin": 0.5725169168404357,
+    "avgLoss": 0.5237801113976823,
+    "passes": 2
+  },
+  "LUNCUSDT": {
+    "pair": "LUNCUSDT",
+    "trades": 1000,
+    "wins": 420,
+    "losses": 580,
+    "winRate": 42,
+    "totalProfit": -28.54528662965287,
+    "avgWin": 0.5632768123290154,
+    "avgLoss": 0.45710611691006814,
+    "passes": 2
+  },
+  "SHIBUSDT": {
+    "pair": "SHIBUSDT",
+    "trades": 1000,
+    "wins": 356,
+    "losses": 644,
+    "winRate": 35.6,
+    "totalProfit": -35.598055475675075,
+    "avgWin": 0.5202936500744608,
+    "avgLoss": 0.34289222810898023,
+    "passes": 2
+  },
+  "FLOKIUSDT": {
+    "pair": "FLOKIUSDT",
+    "trades": 1000,
+    "wins": 478,
+    "losses": 522,
+    "winRate": 47.8,
+    "totalProfit": -20.937654820893382,
+    "avgWin": 0.36053527184773665,
+    "avgLoss": 0.3702557754101751,
+    "passes": 1
+  },
+  "PEPEUSDT": {
+    "pair": "PEPEUSDT",
+    "trades": 1000,
+    "wins": 417,
+    "losses": 583,
+    "winRate": 41.699999999999996,
+    "totalProfit": -36.23914598737528,
+    "avgWin": 0.7628466735643538,
+    "avgLoss": 0.6077979568845804,
+    "passes": 3
+  },
+  "SUIUSDT": {
+    "pair": "SUIUSDT",
+    "trades": 1000,
+    "wins": 476,
+    "losses": 524,
+    "winRate": 47.599999999999994,
+    "totalProfit": -34.380900939471495,
+    "avgWin": 0.5670064559687741,
+    "avgLoss": 0.5806793396576488,
+    "passes": 2
+  },
+  "TONUSDT": {
+    "pair": "TONUSDT",
+    "trades": 1000,
+    "wins": 435,
+    "losses": 565,
+    "winRate": 43.5,
+    "totalProfit": -27.474076559363482,
+    "avgWin": 0.4695786663776469,
+    "avgLoss": 0.41016070165246027,
+    "passes": 2
+  },
+  "NEARUSDT": {
+    "pair": "NEARUSDT",
+    "trades": 1000,
+    "wins": 418,
+    "losses": 582,
+    "winRate": 41.8,
+    "totalProfit": -8.16389813077894,
+    "avgWin": 0.6912081986608343,
+    "avgLoss": 0.5104620707405635,
+    "passes": 2
+  },
+  "ALGOUSDT": {
+    "pair": "ALGOUSDT",
+    "trades": 1000,
+    "wins": 403,
+    "losses": 597,
+    "winRate": 40.300000000000004,
+    "totalProfit": -11.517335531180185,
+    "avgWin": 0.4007871711402341,
+    "avgLoss": 0.28984014321724405,
+    "passes": 2
+  },
+  "FILUSDT": {
+    "pair": "FILUSDT",
+    "trades": 1000,
+    "wins": 421,
+    "losses": 579,
+    "winRate": 42.1,
+    "totalProfit": -5.631878918927043,
+    "avgWin": 1.0178223813570608,
+    "avgLoss": 0.7498015569434363,
+    "passes": 2
+  },
+  "THETAUSDT": {
+    "pair": "THETAUSDT",
+    "trades": 1000,
+    "wins": 289,
+    "losses": 711,
+    "winRate": 28.9,
+    "totalProfit": -3.1247570530248456,
+    "avgWin": 0.6653402165942711,
+    "avgLoss": 0.27483555506155993,
+    "passes": 2
+  },
+  "CHZUSDT": {
+    "pair": "CHZUSDT",
+    "trades": 1000,
+    "wins": 442,
+    "losses": 558,
+    "winRate": 44.2,
+    "totalProfit": -20.13929145807228,
+    "avgWin": 0.3998837220058334,
+    "avgLoss": 0.35284569280403366,
+    "passes": 2
+  }
+}

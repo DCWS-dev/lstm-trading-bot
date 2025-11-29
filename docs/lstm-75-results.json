@@ -1,189 +1,189 @@
 {
   "totalTrades": 4500,
-  "totalWins": 3164,
+  "totalWins": 3105,
   "totalLosses": 0,
-  "accuracy": 0.7031111111111111,
-  "winRate": 70.31111111111112,
+  "accuracy": 0.69,
+  "winRate": 69,
   "pairResults": {
     "BTCUSDT": {
       "trades": 150,
-      "wins": 122,
-      "accuracy": 0.8133333333333334,
-      "avgSignal": 0.8117504023714136
+      "wins": 120,
+      "accuracy": 0.8,
+      "avgSignal": 0.8119663735669772
     },
     "ETHUSDT": {
       "trades": 150,
-      "wins": 125,
-      "accuracy": 0.8333333333333334,
-      "avgSignal": 0.7940246493223266
+      "wins": 119,
+      "accuracy": 0.7933333333333333,
+      "avgSignal": 0.794376647071428
     },
     "BNBUSDT": {
       "trades": 150,
-      "wins": 117,
-      "accuracy": 0.78,
-      "avgSignal": 0.7660913935390032
+      "wins": 112,
+      "accuracy": 0.7466666666666667,
+      "avgSignal": 0.7663981366807391
     },
     "XRPUSDT": {
       "trades": 150,
-      "wins": 101,
-      "accuracy": 0.6733333333333333,
-      "avgSignal": 0.6767561186154499
+      "wins": 89,
+      "accuracy": 0.5933333333333334,
+      "avgSignal": 0.6760196833570121
     },
     "ADAUSDT": {
       "trades": 150,
-      "wins": 102,
-      "accuracy": 0.68,
-      "avgSignal": 0.6769552478930846
+      "wins": 99,
+      "accuracy": 0.66,
+      "avgSignal": 0.676777237931305
     },
     "SOLUSDT": {
       "trades": 150,
-      "wins": 103,
-      "accuracy": 0.6866666666666666,
-      "avgSignal": 0.6770925587111662
+      "wins": 102,
+      "accuracy": 0.68,
+      "avgSignal": 0.6764464461925845
     },
     "DOGEUSDT": {
       "trades": 150,
-      "wins": 101,
-      "accuracy": 0.6733333333333333,
-      "avgSignal": 0.677256989443222
+      "wins": 99,
+      "accuracy": 0.66,
+      "avgSignal": 0.676277222855172
     },
     "DOTUSDT": {
       "trades": 150,
-      "wins": 89,
-      "accuracy": 0.5933333333333334,
-      "avgSignal": 0.6773752994181051
+      "wins": 107,
+      "accuracy": 0.7133333333333334,
+      "avgSignal": 0.6759729071965321
     },
     "LTCUSDT": {
       "trades": 150,
-      "wins": 116,
-      "accuracy": 0.7733333333333333,
-      "avgSignal": 0.7761646331421009
+      "wins": 109,
+      "accuracy": 0.7266666666666667,
+      "avgSignal": 0.7760095905290162
     },
     "LINKUSDT": {
       "trades": 150,
-      "wins": 102,
-      "accuracy": 0.68,
-      "avgSignal": 0.6762090465630511
+      "wins": 104,
+      "accuracy": 0.6933333333333334,
+      "avgSignal": 0.6761579061506072
     },
     "MATICUSDT": {
       "trades": 150,
-      "wins": 107,
-      "accuracy": 0.7133333333333334,
-      "avgSignal": 0.6776620039861737
+      "wins": 101,
+      "accuracy": 0.6733333333333333,
+      "avgSignal": 0.6768335693686099
     },
     "AVAXUSDT": {
       "trades": 150,
-      "wins": 102,
-      "accuracy": 0.68,
-      "avgSignal": 0.6766523716981269
+      "wins": 96,
+      "accuracy": 0.64,
+      "avgSignal": 0.6764850039854146
     },
     "FTMUSDT": {
       "trades": 150,
-      "wins": 97,
-      "accuracy": 0.6466666666666666,
-      "avgSignal": 0.6767937113573841
+      "wins": 99,
+      "accuracy": 0.66,
+      "avgSignal": 0.6769114499204869
     },
     "ATOMUSDT": {
       "trades": 150,
-      "wins": 101,
-      "accuracy": 0.6733333333333333,
-      "avgSignal": 0.6764473352012481
+      "wins": 100,
+      "accuracy": 0.6666666666666666,
+      "avgSignal": 0.6764203298703596
     },
     "UNIUSDT": {
       "trades": 150,
-      "wins": 105,
-      "accuracy": 0.7,
-      "avgSignal": 0.6771310807031315
+      "wins": 109,
+      "accuracy": 0.7266666666666667,
+      "avgSignal": 0.6756405749819032
     },
     "ARBUSDT": {
       "trades": 150,
       "wins": 103,
       "accuracy": 0.6866666666666666,
-      "avgSignal": 0.6769154607494373
+      "avgSignal": 0.6771480242431221
     },
     "OPUSDT": {
       "trades": 150,
-      "wins": 91,
-      "accuracy": 0.6066666666666667,
-      "avgSignal": 0.6771357652822475
+      "wins": 100,
+      "accuracy": 0.6666666666666666,
+      "avgSignal": 0.6762429719766264
     },
     "APEUSDT": {
       "trades": 150,
-      "wins": 100,
-      "accuracy": 0.6666666666666666,
-      "avgSignal": 0.6772261512090433
+      "wins": 97,
+      "accuracy": 0.6466666666666666,
+      "avgSignal": 0.6760478918966748
     },
     "LUNCUSDT": {
       "trades": 150,
-      "wins": 96,
-      "accuracy": 0.64,
-      "avgSignal": 0.6775421130245226
+      "wins": 94,
+      "accuracy": 0.6266666666666667,
+      "avgSignal": 0.6770917569060344
     },
     "SHIBUSDT": {
       "trades": 150,
-      "wins": 104,
-      "accuracy": 0.6933333333333334,
-      "avgSignal": 0.6761687635117498
+      "wins": 96,
+      "accuracy": 0.64,
+      "avgSignal": 0.6765700261190487
     },
     "FLOKIUSDT": {
       "trades": 150,
-      "wins": 103,
-      "accuracy": 0.6866666666666666,
-      "avgSignal": 0.6772503385151907
+      "wins": 113,
+      "accuracy": 0.7533333333333333,
+      "avgSignal": 0.6768739185137816
     },
     "PEPEUSDT": {
       "trades": 150,
-      "wins": 108,
-      "accuracy": 0.72,
-      "avgSignal": 0.6765427294217516
+      "wins": 98,
+      "accuracy": 0.6533333333333333,
+      "avgSignal": 0.6758220651002732
     },
     "SUIUSDT": {
       "trades": 150,
-      "wins": 102,
-      "accuracy": 0.68,
-      "avgSignal": 0.6769085716579476
+      "wins": 101,
+      "accuracy": 0.6733333333333333,
+      "avgSignal": 0.6767954220375224
     },
     "TONUSDT": {
       "trades": 150,
-      "wins": 107,
-      "accuracy": 0.7133333333333334,
-      "avgSignal": 0.6764867764235738
+      "wins": 100,
+      "accuracy": 0.6666666666666666,
+      "avgSignal": 0.6775658419091622
     },
     "NEARUSDT": {
       "trades": 150,
-      "wins": 111,
-      "accuracy": 0.74,
-      "avgSignal": 0.6761664444401626
+      "wins": 108,
+      "accuracy": 0.72,
+      "avgSignal": 0.6758819773453845
     },
     "ALGOUSDT": {
       "trades": 150,
-      "wins": 113,
-      "accuracy": 0.7533333333333333,
-      "avgSignal": 0.6760179792278944
+      "wins": 108,
+      "accuracy": 0.72,
+      "avgSignal": 0.676205087720553
     },
     "FILUSDT": {
       "trades": 150,
-      "wins": 105,
-      "accuracy": 0.7,
-      "avgSignal": 0.7573743090814298
+      "wins": 115,
+      "accuracy": 0.7666666666666667,
+      "avgSignal": 0.7574073292063602
     },
     "THETAUSDT": {
       "trades": 150,
-      "wins": 116,
-      "accuracy": 0.7733333333333333,
-      "avgSignal": 0.7403425195103888
+      "wins": 111,
+      "accuracy": 0.74,
+      "avgSignal": 0.7390551754197209
     },
     "CHZUSDT": {
       "trades": 150,
-      "wins": 109,
-      "accuracy": 0.7266666666666667,
-      "avgSignal": 0.6758890095227005
+      "wins": 97,
+      "accuracy": 0.6466666666666666,
+      "avgSignal": 0.6776558060836065
     },
     "OPTIMUSDT": {
       "trades": 150,
-      "wins": 106,
-      "accuracy": 0.7066666666666667,
-      "avgSignal": 0.6768131229992127
+      "wins": 99,
+      "accuracy": 0.66,
+      "avgSignal": 0.6760901485093799
     }
   }
 }
