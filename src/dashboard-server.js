@@ -410,4 +410,12 @@ class DashboardServer extends EventEmitter {
   }
 }
 
+// Start the server if this file is run directly
+if (require.main === module) {
+  const server = new DashboardServer(3000);
+  server.start();
+  console.log('📊 Dashboard Server started on http://localhost:3000');
+  console.log('   Serving static files from public/');
+}
+
 module.exports = DashboardServer;
