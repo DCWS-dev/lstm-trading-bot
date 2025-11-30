@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard - Paper Trading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f1419;
+            color: #e0e0e0;
+            padding: 16px;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #333;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .status-active {
+            background: #10b981;
+            color: white;
+        }
+
+        .status-paused {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            background: #1a1f28;
+            border: 1px solid #333;
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .metric-change {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .positive {
+            color: #10b981;
+        }
+
+        .negative {
+            color: #ef4444;
+        }
+
+        .neutral {
+            color: #888;
+        }
+
+        .trades-section {
+            margin-top: 32px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #333;
+            color: #fff;
+        }
+
+        .trades-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1f28;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+            font-size: 13px;
+        }
+
+        .trades-table thead {
+            background: #0f1419;
+            border-bottom: 1px solid #333;
+        }
+
+        .trades-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+
+        .trades-table td {
+            padding: 12px;
+            border-bottom: 1px solid #2a2f38;
+            color: #e0e0e0;
+        }
+
+        .trades-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .trades-table tr:hover {
+            background: #242a33;
+        }
+
+        .pair-badge {
+            background: #1f2937;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #60a5fa;
+        }
+
+        .side-buy {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .side-sell {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .win {
+            color: #10b981;
+        }
+
+        .loss {
+            color: #ef4444;
+        }
+
+        .pending {
+            color: #f59e0b;
+        }
+
+        .pairs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .pair-card {
+            background: #1a1f28;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .pair-name {
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .pair-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            color: #ccc;
+        }
+
+        .pair-stat-label {
+            color: #666;
+        }
+
+        .pair-stat-value {
+            font-weight: 600;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: #374151;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .update-time {
+            text-align: right;
+            font-size: 11px;
+            color: #666;
+            margin-top: 16px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 32px;
+            color: #666;
+        }
+
+        .performance-chart {
+            background: #1a1f28;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-box {
+            background: #1a1f28;
+            border: 1px solid #333;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #2a2f38;
+            font-size: 13px;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            color: #888;
+        }
+
+        .summary-value {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .live {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>📊 Trading Dashboard</h1>
+            <p style="color: #888; font-size: 13px; margin-top: 4px;">Paper Trading Monitor • Hybrid Strategy v1.0</p>
+        </div>
+        <div class="status-badge status-active live">● LIVE</div>
+    </div>
+
+    <!-- Main Metrics -->
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">Total Trades</div>
+            <div class="metric-value" id="totalTrades">0</div>
+            <div class="metric-change neutral" id="tradesChange"></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Win Rate</div>
+            <div class="metric-value" id="winRate">0%</div>
+            <div class="metric-change" id="wrChange"></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Daily ROI</div>
+            <div class="metric-value" id="dailyROI">0%</div>
+            <div class="metric-change" id="roiChange"></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Account Balance</div>
+            <div class="metric-value" id="balance">$10,000</div>
+            <div class="metric-change" id="balanceChange"></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Profit/Loss</div>
+            <div class="metric-value" id="pnl">$0</div>
+            <div class="metric-change" id="pnlChange"></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Active Positions</div>
+            <div class="metric-value" id="activePositions">0</div>
+            <div class="metric-change neutral" id="posChange"></div>
+        </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="two-column">
+        <!-- Left: Summary -->
+        <div>
+            <div class="section-title">Performance Summary</div>
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span class="summary-label">Winning Trades</span>
+                    <span class="summary-value" id="winTrades">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Losing Trades</span>
+                    <span class="summary-value" id="lossTrades">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Best Trade</span>
+                    <span class="summary-value positive" id="bestTrade">+0%</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Worst Trade</span>
+                    <span class="summary-value negative" id="worstTrade">-0%</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Avg Win</span>
+                    <span class="summary-value" id="avgWin">+0%</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Avg Loss</span>
+                    <span class="summary-value" id="avgLoss">-0%</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Sharpe Ratio</span>
+                    <span class="summary-value" id="sharpe">0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Max Drawdown</span>
+                    <span class="summary-value negative" id="maxDD">-0%</span>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 24px;">Active Pairs</div>
+            <div class="pairs-grid" id="pairsGrid">
+                <div class="empty-state">No pairs data</div>
+            </div>
+        </div>
+
+        <!-- Right: Recent Trades -->
+        <div>
+            <div class="section-title">Recent Trades (Last 20)</div>
+            <div style="overflow-x: auto;">
+                <table class="trades-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Pair</th>
+                            <th>Side</th>
+                            <th>Entry</th>
+                            <th>Exit</th>
+                            <th>P&L</th>
+                            <th>%</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tradesTableBody">
+                        <tr>
+                            <td colspan="8" class="empty-state">No trades yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button class="btn-primary" onclick="refreshData()">🔄 Refresh</button>
+        <button class="btn-secondary" onclick="exportData()">📥 Export CSV</button>
+        <button class="btn-danger" onclick="resetStats()">⚠️ Reset Stats</button>
+    </div>
+
+    <div class="update-time">
+        Last updated: <span id="updateTime">--:--:--</span>
+    </div>
+
+    <script>
+        // Sample data storage (in production, fetch from backend)
+        let dashboardData = {
+            trades: [],
+            stats: {
+                totalTrades: 0,
+                winTrades: 0,
+                lossTrades: 0,
+                winRate: 0,
+                dailyROI: 0,
+                balance: 10000,
+                startBalance: 10000,
+                pnl: 0,
+                activePositions: 0,
+                bestTrade: 0,
+                worstTrade: 0,
+                avgWin: 0,
+                avgLoss: 0,
+                sharpe: 0,
+                maxDD: 0
+            },
+            pairs: {}
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadLocalData();
+            updateDashboard();
+            setInterval(updateDashboard, 2000); // Auto-refresh every 2s
+        });
+
+        function loadLocalData() {
+            const saved = localStorage.getItem('tradingDashboard');
+            if (saved) {
+                dashboardData = JSON.parse(saved);
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem('tradingDashboard', JSON.stringify(dashboardData));
+        }
+
+        function updateDashboard() {
+            const stats = dashboardData.stats;
+
+            // Update main metrics
+            document.getElementById('totalTrades').textContent = stats.totalTrades;
+            document.getElementById('winRate').textContent = stats.winRate.toFixed(1) + '%';
+            document.getElementById('dailyROI').textContent = stats.dailyROI.toFixed(2) + '%';
+            document.getElementById('balance').textContent = '$' + stats.balance.toFixed(2);
+            document.getElementById('pnl').textContent = '$' + stats.pnl.toFixed(2);
+            document.getElementById('activePositions').textContent = stats.activePositions;
+
+            // Color coding
+            document.getElementById('wrChange').className = 'metric-change ' + (stats.winRate >= 50 ? 'positive' : 'negative');
+            document.getElementById('wrChange').textContent = (stats.winRate >= 50 ? '✓' : '✗') + ' Target: 50%';
+
+            document.getElementById('roiChange').className = 'metric-change ' + (stats.dailyROI > 0 ? 'positive' : 'negative');
+            document.getElementById('roiChange').textContent = (stats.dailyROI > 0 ? '+' : '') + stats.dailyROI.toFixed(2) + '%';
+
+            document.getElementById('balanceChange').className = 'metric-change ' + (stats.pnl > 0 ? 'positive' : stats.pnl < 0 ? 'negative' : 'neutral');
+            document.getElementById('balanceChange').textContent = (stats.pnl > 0 ? '+' : '') + stats.pnl.toFixed(2) + ' (' + ((stats.pnl / stats.startBalance) * 100).toFixed(1) + '%)';
+
+            document.getElementById('pnlChange').className = 'metric-change ' + (stats.pnl > 0 ? 'positive' : stats.pnl < 0 ? 'negative' : 'neutral');
+            document.getElementById('pnlChange').textContent = (stats.pnl > 0 ? 'Profit' : stats.pnl < 0 ? 'Loss' : 'Neutral');
+
+            // Summary stats
+            document.getElementById('winTrades').textContent = stats.winTrades;
+            document.getElementById('lossTrades').textContent = stats.lossTrades;
+            document.getElementById('bestTrade').textContent = '+' + stats.bestTrade.toFixed(2) + '%';
+            document.getElementById('worstTrade').textContent = stats.worstTrade.toFixed(2) + '%';
+            document.getElementById('avgWin').textContent = '+' + stats.avgWin.toFixed(2) + '%';
+            document.getElementById('avgLoss').textContent = stats.avgLoss.toFixed(2) + '%';
+            document.getElementById('sharpe').textContent = stats.sharpe.toFixed(2);
+            document.getElementById('maxDD').textContent = stats.maxDD.toFixed(2) + '%';
+
+            // Pairs grid
+            updatePairsGrid();
+
+            // Trades table
+            updateTradesTable();
+
+            // Update time
+            document.getElementById('updateTime').textContent = new Date().toLocaleTimeString();
+        }
+
+        function updatePairsGrid() {
+            const container = document.getElementById('pairsGrid');
+            const pairs = Object.entries(dashboardData.pairs);
+
+            if (pairs.length === 0) {
+                container.innerHTML = '<div class="empty-state">No pair data</div>';
+                return;
+            }
+
+            container.innerHTML = pairs.map(([pair, data]) => `
+                <div class="pair-card">
+                    <div class="pair-name">${pair}</div>
+                    <div class="pair-stat">
+                        <span class="pair-stat-label">Trades</span>
+                        <span class="pair-stat-value">${data.trades || 0}</span>
+                    </div>
+                    <div class="pair-stat">
+                        <span class="pair-stat-label">WR</span>
+                        <span class="pair-stat-value">${(data.winRate || 0).toFixed(1)}%</span>
+                    </div>
+                    <div class="pair-stat">
+                        <span class="pair-stat-label">P&L</span>
+                        <span class="pair-stat-value ${(data.pnl || 0) >= 0 ? 'positive' : 'negative'}">
+                            ${(data.pnl || 0) >= 0 ? '+' : ''}${(data.pnl || 0).toFixed(2)}%
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateTradesTable() {
+            const tbody = document.getElementById('tradesTableBody');
+            const trades = dashboardData.trades.slice(-20).reverse();
+
+            if (trades.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No trades yet</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = trades.map(trade => {
+                const pnlClass = trade.pnl > 0 ? 'win' : trade.pnl < 0 ? 'loss' : 'neutral';
+                const pnlPercent = ((trade.pnl / trade.entry) * 100).toFixed(2);
+                return `
+                    <tr>
+                        <td>${new Date(trade.timestamp).toLocaleTimeString()}</td>
+                        <td><span class="pair-badge">${trade.pair}</span></td>
+                        <td><span class="side-${trade.side.toLowerCase()}">${trade.side}</span></td>
+                        <td>$${trade.entry.toFixed(4)}</td>
+                        <td>${trade.exit ? '$' + trade.exit.toFixed(4) : '—'}</td>
+                        <td class="${pnlClass}">$${trade.pnl.toFixed(2)}</td>
+                        <td class="${pnlClass}">${pnlPercent}%</td>
+                        <td><span class="${trade.status === 'closed' ? 'win' : 'pending'}">${trade.status}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function refreshData() {
+            // Simulate API call
+            console.log('Refreshing data...');
+            updateDashboard();
+        }
+
+        function exportData() {
+            let csv = 'Time,Pair,Side,Entry,Exit,P&L,%,Status\n';
+            dashboardData.trades.forEach(trade => {
+                const pnlPercent = ((trade.pnl / trade.entry) * 100).toFixed(2);
+                csv += `${new Date(trade.timestamp).toLocaleString()},${trade.pair},${trade.side},${trade.entry},${trade.exit || '—'},${trade.pnl},${pnlPercent},${trade.status}\n`;
+            });
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv));
+            element.setAttribute('download', 'trades_' + new Date().toISOString().slice(0, 10) + '.csv');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        function resetStats() {
+            if (confirm('Reset all statistics? This cannot be undone.')) {
+                dashboardData = {
+                    trades: [],
+                    stats: {
+                        totalTrades: 0,
+                        winTrades: 0,
+                        lossTrades: 0,
+                        winRate: 0,
+                        dailyROI: 0,
+                        balance: 10000,
+                        startBalance: 10000,
+                        pnl: 0,
+                        activePositions: 0,
+                        bestTrade: 0,
+                        worstTrade: 0,
+                        avgWin: 0,
+                        avgLoss: 0,
+                        sharpe: 0,
+                        maxDD: 0
+                    },
+                    pairs: {}
+                };
+                saveData();
+                updateDashboard();
+                alert('Statistics reset!');
+            }
+        }
+
+        // Demo: Add sample trade (for testing)
+        function addSampleTrade() {
+            const pairs = ['BTCUSDT', 'ETHUSDT', 'BNBUSDT'];
+            const pair = pairs[Math.floor(Math.random() * pairs.length)];
+            const side = Math.random() > 0.5 ? 'BUY' : 'SELL';
+            const entry = Math.random() * 100 + 50;
+            const pnl = (Math.random() - 0.4) * 5;
+
+            dashboardData.trades.push({
+                timestamp: Date.now(),
+                pair,
+                side,
+                entry,
+                exit: entry + pnl,
+                pnl,
+                status: 'closed'
+            });
+
+            dashboardData.stats.totalTrades++;
+            if (pnl > 0) dashboardData.stats.winTrades++;
+            else dashboardData.stats.lossTrades++;
+
+            dashboardData.stats.winRate = (dashboardData.stats.winTrades / dashboardData.stats.totalTrades) * 100;
+            dashboardData.stats.pnl += pnl;
+            dashboardData.stats.balance = dashboardData.stats.startBalance + dashboardData.stats.pnl;
+
+            saveData();
+            updateDashboard();
+        }
+    </script>
+</body>
+</html>
