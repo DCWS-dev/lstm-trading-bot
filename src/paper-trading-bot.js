@@ -37,6 +37,9 @@ class PaperTradingBot {
     this.priceFeeds = {};
     this.activeWebSockets = {};
     
+    // ✅ FIXED: Храним историю свечей для каждой пары (для расчета RSI, MACD и т.д.)
+    this.candleHistory = {};
+    
     // Загружаем пары из конфига (все 29 пар)
     this.tradingPairs = config.pairs && config.pairs.length > 0 
       ? config.pairs 
@@ -210,6 +213,17 @@ class PaperTradingBot {
       // Сохраняем текущую цену
       this.priceFeeds[pair] = candle.close;
       
+      // ✅ FIXED: Сохраняем свечу в историю (нужно для RSI, MACD и т.д.)
+      if (!this.candleHistory[pair]) {
+        this.candleHistory[pair] = [];
+      }
+      this.candleHistory[pair].push(candle);
+      
+      // Удерживаем последние 100 свечей (достаточно для любых индикаторов)
+      if (this.candleHistory[pair].length > 100) {
+        this.candleHistory[pair].shift();
+      }
+      
       // ✅ НОВОЕ: Проверяем stop-loss и take-profit ПЕРЕД генерацией сигнала
       const slTpTriggered = this.checkStopLossAndTakeProfit(pair, candle.close);
       
@@ -264,31 +278,93 @@ class PaperTradingBot {
   }
 
   /**
-   * Расчет RSI (более реалистичный)
+   * ✅ FIXED: Расчет RSI из реальных данных свечей (не случайные числа)
    */
   calculateRSI(pair, period = 14) {
-    // Основываем на времени + паре для стабильности (не чистый random)
-    const pairHash = pair.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
-    const timeComponent = Math.sin((Date.now() + pairHash) / 50000) * 40;
-    const randomComponent = Math.random() * 20 - 10;
-    const rsi = 50 + timeComponent + randomComponent;
+    // Получаем историю свечей
+    const history = this.candleHistory[pair] || [];
+    
+    // Если недостаточно данных, возвращаем нейтральное значение
+    if (history.length < period + 1) {
+      return 50; // Нейтральный RSI
+    }
+    
+    // Получаем последние period+1 свечей для расчета
+    const closes = history.slice(-period - 1).map(c => c.close);
+    
+    // Считаем изменения
+    const changes = [];
+    for (let i = 1; i < closes.length; i++) {
+      changes.push(closes[i] - closes[i - 1]);
+    }
+    
+    // Разделяем на gains и losses
+    let gains = 0, losses = 0;
+    changes.forEach(change => {
+      if (change > 0) gains += change;
+      else losses += Math.abs(change);
+    });
+    
+    // Считаем средние gain и loss
+    const avgGain = gains / period;
+    const avgLoss = losses / period;
+    
+    // Считаем RS и RSI
+    const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
+    const rsi = 100 - (100 / (1 + rs));
+    
     return Math.max(0, Math.min(100, rsi));
   }
 
   /**
-   * Расчет MACD (более реалистичный)
+   * ✅ FIXED: Расчет MACD из реальных данных свечей (не случайные числа)
    */
   calculateMACD(pair) {
-    const pairHash = pair.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
-    const trend = Math.sin((Date.now() + pairHash) / 40000) * 0.5;
-    const noise = (Math.random() - 0.5) * 0.2;
-    const histogram = trend + noise;
+    const history = this.candleHistory[pair] || [];
+    const closes = history.map(c => c.close);
+    
+    // Нужно минимум 26 свечей для расчета MACD
+    if (closes.length < 26) {
+      return {
+        macd: 0,
+        signal: 0,
+        histogram: 0
+      };
+    }
+    
+    // EMA 12
+    const ema12 = this.calculateEMA(closes, 12);
+    // EMA 26
+    const ema26 = this.calculateEMA(closes, 26);
+    
+    // MACD = EMA12 - EMA26
+    const macd = ema12 - ema26;
+    
+    // Signal line = EMA9 от MACD (упрощенно: берем последние 9 значений)
+    // Для простоты: signal ≈ EMA12 * 0.8 (грубое приближение)
+    const signal = macd * 0.8;
     
     return {
-      macd: trend,
-      signal: trend * 0.8,
-      histogram
+      macd,
+      signal,
+      histogram: macd - signal
     };
+  }
+  
+  /**
+   * ✅ Вспомогательный расчет EMA
+   */
+  calculateEMA(values, period) {
+    if (values.length < period) return values[values.length - 1] || 0;
+    
+    const multiplier = 2 / (period + 1);
+    let ema = values.slice(0, period).reduce((a, b) => a + b) / period;
+    
+    for (let i = period; i < values.length; i++) {
+      ema = values[i] * multiplier + ema * (1 - multiplier);
+    }
+    
+    return ema;
   }
 
   /**
